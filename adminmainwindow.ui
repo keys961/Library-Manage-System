@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AdminMainWindow</class>
+ <widget class="QMainWindow" name="AdminMainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1130</width>
+    <height>619</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>管理员</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="userLabel">
+      <property name="text">
+       <string>User:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QTabWidget" name="adminTabWidget">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="BookQueryWidget" name="bookQueryTab">
+       <attribute name="title">
+        <string>书目查询</string>
+       </attribute>
+      </widget>
+      <widget class="UserAdminWidget" name="userAdminTab">
+       <attribute name="title">
+        <string>用户管理</string>
+       </attribute>
+      </widget>
+      <widget class="InsertBookWidget" name="insertBookTab">
+       <attribute name="title">
+        <string>加入新书</string>
+       </attribute>
+      </widget>
+      <widget class="DeleteBookWidget" name="deleteBookTab">
+       <attribute name="title">
+        <string>删除书目</string>
+       </attribute>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1130</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="adminExitMenu">
+    <property name="title">
+     <string>退出</string>
+    </property>
+    <addaction name="adminExitAction"/>
+   </widget>
+   <addaction name="adminExitMenu"/>
+  </widget>
+  <action name="adminExitAction">
+   <property name="text">
+    <string>退出</string>
+   </property>
+   <property name="shortcut">
+    <string>Esc</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>BookQueryWidget</class>
+   <extends>QWidget</extends>
+   <header location="global">bookquerywidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>UserAdminWidget</class>
+   <extends>QWidget</extends>
+   <header location="global">useradminwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>InsertBookWidget</class>
+   <extends>QWidget</extends>
+   <header location="global">insertbookwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>DeleteBookWidget</class>
+   <extends>QWidget</extends>
+   <header location="global">deletebookwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
